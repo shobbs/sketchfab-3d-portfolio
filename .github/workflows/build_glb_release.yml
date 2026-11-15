@@ -1,0 +1,53 @@
+name: Build GLB Portfolio
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-glb:
+    name: Generate and upload .glb binaries
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy pillow
+
+      - name: Generate the three GLB assets
+        run: python generate_glb_portfolio.py
+
+      - name: Verify outputs exist
+        run: |
+          set -e
+          for f in \
+            exports/Model_1_Rugged_Edge_Comms_Node.glb \
+            exports/Model_2_Articulated_Robotic_Arm.glb \
+            exports/Model_3_Stylized_Character_Rig.glb
+          do
+            test -s "$f" || { echo "::error::missing or empty: $f"; exit 1; }
+            echo "ok: $f ($(wc -c < "$f") bytes)"
+          done
+
+      - name: Upload GLB build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sketchfab-3model-glb
+          path: exports/*.glb
+          if-no-files-found: error
+          retention-days: 30
