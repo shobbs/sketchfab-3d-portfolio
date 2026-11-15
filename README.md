@@ -7,11 +7,11 @@ Automated Blender Python (`bpy`) and standalone binary glTF 2.0 (`.glb`) asset g
 
 ## Portfolio Lineup (3-Model Architecture)
 
-| Slot | Asset File | Asset Type | Core Technical Specifications |
-| :--- | :--- | :--- | :--- |
-| **Model 1** | `Model_1_Rugged_Edge_Comms_Node.glb` | Hard-Surface Prop (MYCALLA INC. Rugged Edge AI / Off-Grid Comms Transceiver) | All-quad beveled topology, outward normals, non-overlapping UVs (`0.02` island margin), embedded PBR Metallic-Roughness & Tangent-Space Normal PNG maps |
-| **Model 2** | `Model_2_Articulated_Robotic_Arm.glb` | Rigged & Animated 6-DOF Robotic Manipulator | Hierarchical 7-bone armature (`Root`, `Base_Yaw`, `Shoulder_Pitch`, `Elbow_Pitch`, `Wrist_Roll`, `Gripper_L`, `Gripper_R`), rigid `1.0` joint skinning (`JOINTS_0` / `WEIGHTS_0`), seamless 120-frame (4.0s @ 30fps) diagnostic loop |
-| **Model 3** | `Model_3_Stylized_Character_Rig.glb` | Stylized Character Bust / Mascot Rig & Idle Loop | Symmetrical all-quad deformation loops, 6-bone upper-body deform rig (`Pelvis`, `Spine_Chest`, `Neck`, `Head`, `UpperArm_L`, `UpperArm_R`) with blended joint weights, 120-frame breathing and look-around idle loop |
+| Slot | Asset File | Asset Type | Core Technical Specifications | Live on Sketchfab |
+| :--- | :--- | :--- | :--- | :--- |
+| **Model 1** | `Model_1_Rugged_Edge_Comms_Node.glb` | Hard-Surface Prop (MYCALLA INC. Rugged Edge AI / Off-Grid Comms Transceiver) | All-quad beveled topology, outward normals, non-overlapping UVs (`0.02` island margin), embedded PBR Metallic-Roughness & Tangent-Space Normal PNG maps | **[View in 3D ↗](https://skfb.ly/pQtVQ)** |
+| **Model 2** | `Model_2_Articulated_Robotic_Arm.glb` | Rigged & Animated 6-DOF Robotic Manipulator | Hierarchical 7-bone armature (`Root`, `Base_Yaw`, `Shoulder_Pitch`, `Elbow_Pitch`, `Wrist_Roll`, `Gripper_L`, `Gripper_R`), rigid `1.0` joint skinning (`JOINTS_0` / `WEIGHTS_0`), seamless 120-frame (4.0s @ 30fps) diagnostic loop | **[View in 3D ↗](https://skfb.ly/pQtVY)** |
+| **Model 3** | `Model_3_Stylized_Character_Rig.glb` | Stylized Character Bust / Mascot Rig & Idle Loop | Symmetrical all-quad deformation loops, 6-bone upper-body deform rig (`Pelvis`, `Spine_Chest`, `Neck`, `Head`, `UpperArm_L`, `UpperArm_R`) with blended joint weights, 120-frame breathing and look-around idle loop | **[View in 3D ↗](https://skfb.ly/pQtWr)** |
 
 ## Repository Structure
 
